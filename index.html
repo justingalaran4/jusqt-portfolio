@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Digital Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style> 
+        /* --- GLOBAL REBOOT & THEME --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;      
+            display: flex;           
+            flex-direction: column;  
+            justify-content: flex-start; 
+            align-items: center;
+            background: radial-gradient(circle at 50% 0%, #1a1f38 0%, #0a0c16 100%);
+            color: #f3f4f6;
+            gap: 30px;              
+            padding: 40px 20px;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* --- STUNNING FLOATING NAV BAR --- */
+        nav {  
+            font-size: 14px;
+            font-weight: 600;         
+            display: flex;           
+            gap: 15px;              
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            text-decoration: none;  
+            color: #9ca3af;
+            padding: 8px 16px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: #00ffff;
+            background: rgba(0, 255, 255, 0.08);
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+
+        /* --- PROFILE HERO BANNER HEADER (FACEBOOK STYLE REVOLUTION) --- */
+        .profile-container {
+            width: 100%;
+            max-width: 1000px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
+
+        .cover-photo {
+            height: 260px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover-photo::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+            transform: skewX(-25deg);
+            animation: shine 8s infinite linear;
+        }
+
+        @keyframes shine {
+            0% { left: -150%; }
+            100% { left: 150%; }
+        }
+
+        .profile-meta-block {
+            padding: 0 40px 30px 40px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        /* Avatar Transformation */
+        img {
+            display: block;
+            width: 160px;          
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #0a0c16;
+            margin-top: -80px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            z-index: 2;
+            background: #1a1f38;
+        }
+
+        img:hover {
+            transform: scale(1.05) rotate(3deg);
+            border-color: #00ffff;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+        }
+
+        /* Profile Title & Badges */
+        .profile-title-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .name-headline {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        h1 {   
+            display: block;
+            text-align: left;     
+            font-size: 32px;        
+            font-weight: 700;
+            margin: 0;        
+            background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .profile-tagline {
+            color: #00ffff;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* --- CLIENT ACQUISITION ACTION BUTTONS --- */
+        .profile-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            color: #000;
+            box-shadow: 0 4px 20px rgba(0, 242, 254, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0, 242, 254, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* --- MAIN TWO-COLUMN DASHBOARD LAYOUT --- */
+        .dashboard-grid {
+            width: 100%;
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 850px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            .profile-title-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Glassmorphic Cards */
+        .dash-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 24px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 10px;
+        }
+
+        /* --- LEFT SIDEBAR: PROFILE INTRO & STATS --- */
+        .intro-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .intro-item {
+            font-size: 14px;
+            color: #9ca3af;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .intro-item strong {
+            color: #e5e7eb;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            font-size: 12px;
+            background: rgba(79, 70, 229, 0.15);
+            color: #a5b4fc;
+            padding: 6px 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(79, 70, 229, 0.3);
+        }
+
+        /* --- RIGHT CONTENT AREA: PREMIUM FEATURE VIDEO --- */
+        .main-content-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        video {
+            display: block;
+            width: 100%;             
+            max-width: 1000px;        
+            height: auto;
+        }
+
+        /* --- PREMIUM DYNAMIC PROJECT SHOWCASE (CUSTOM PRODUCT LAYOUTS) --- */
+        .project-showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .project-img-box {
+            height: 160px;
+            background: #111424;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Modern layout adjustment for images */
+        .project-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin-top: 0;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+        }
+        
+        .project-img-box img:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Creative Image Swap Animation Container */
+        .project-card:hover .project-img-box {
+            background: linear-gradient(45deg, #1e1b4b, #311042);
+        }
+
+        .project-info {
+            padding: 16px;
+        }
+
+        .project-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .project-desc {
+            font-size: 13px;
+            color: #9ca3af;
+            line-height: 1.4;
+        }
+
+        .project-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            color: #00ffff;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            z-index: 5;
+        }
+
+        /* --- ADDED CONTENT FORMATTING FOR LINK TARGETS --- */
+        .section-text {
+            font-size: 14px;
+            color: #9ca3af;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        
+        .contact-form-mock {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #00ffff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* --- BRAND NEW CONTACT DETAIL STYLING --- */
+        .contact-channels {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .channel-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: #e5e7eb;
+            text-decoration: none;
+        }
+
+        .channel-item:hover {
+            color: #00ffff;
+        }
+
+        .channel-icon {
+            font-size: 16px;
+        }
+
+        /* --- DYNAMIC DEV HISTORY PIC STYLING --- */
+        .story-layout {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .story-img-frame {
+            width: 240px;
+            flex-shrink: 0;
+            border-radius: 14px;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .story-img-frame img {
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            margin-top: 0;
+            border: none;
+        }
+
+        /* --- PHONE & ANDROID SCREEN PROFESSIONAL CORE OVERHAUL --- */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 10px;
+                gap: 15px;
+            }
+
+            nav {
+                top: 10px;
+                width: 100%;
+                justify-content: center;
+                gap: 4px;
+                padding: 8px 6px;
+            }
+
+            nav a {
+                padding: 6px 10px;
+                font-size: 11px;
+                letter-spacing: 0px;
+            }
+
+            .cover-photo {
+                height: 140px;
+            }
+
+            .profile-meta-block {
+                padding: 0 16px 20px 16px;
+                align-items: center;
+            }
+
+            .profile-meta-block img {
+                width: 110px;
+                height: 110px;
+                margin-top: -55px;
+            }
+
+            .profile-title-wrapper {
+                text-align: center;
+                margin-top: 10px;
+                justify-content: center;
+            }
+
+            .name-headline {
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 22px;
+                text-align: center;
+            }
+
+            .profile-tagline {
+                font-size: 11px;
+                text-align: center;
+            }
+
+            .profile-actions {
+                width: 100%;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+
+            .dash-card {
+                padding: 16px;
+                border-radius: 16px;
+            }
+
+            .story-layout {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+
+            .story-img-frame {
+                width: 100%;
+                max-width: 320px;
+            }
+
+            .project-showcase-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+        
+    <nav> 
+         <a href="#Home">HOME</a>
+         <a href="#Projects">PROJECTS</a>
+         <a href="#Story">STORY</a> 
+         <a href="#About">ABOUT</a>
+         <a href="#Contact">CONTACT</a>
+    </nav>
+
+    <main class="profile-container" id="Home">
+        <div class="cover-photo"></div>
+
+        <div class="profile-meta-block">
+            <img src="profile.png" alt="Justin" />
+            
+            <div class="profile-title-wrapper">
+                <div class="name-headline">
+                    <h1>Justin Digital Profile</h1>
+                    <span class="profile-tagline">Full-Stack Developer & Systems Architect</span>
+                </div>
+                
+                <div class="profile-actions">
+                    <a href="#Contact" class="btn btn-primary">Order Custom System</a>
+                    <a href="#Projects" class="btn btn-secondary">View Showcase</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="dashboard-grid">
+        
+        <aside class="dash-card">
+            <h2 class="card-title">✨ Bio & Specifications</h2>
+            <ul class="intro-list">
+                <li class="intro-item">💼 Works as <strong>Freelance Systems Developer</strong></li>
+                <li class="intro-item">🚀 Specializes in <strong>Web Products & Automation</strong></li>
+                <li class="intro-item">📍 Available for <strong>Global Remote Contract Operations</strong></li>
+                <li class="intro-item">⚡ High Performance <strong>UI/UX Custom Implementations</strong></li>
+            </ul>
+            
+            <h2 class="card-title" style="margin-top: 25px;">🛠️ Tech Stack</h2>
+            <div class="skills-container">
+                <span class="skill-tag">HTML5 / CSS3 / JAVA SCRIFT</span>
+                <span class="skill-tag">Premium UI/UX</span>
+                <span class="skill-tag">Custom Systems</span>
+                <span class="skill-tag">Database Architecture</span>
+                <span class="skill-tag">Responsive Core</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">n8n</span>
+                <span class="skill-tag">PHP/JAVA/C#</span>
+            </div>
+        </aside>
+
+        <div class="main-content-flow">
+            
+            <div class="dash-card" style="padding: 16px;">
+                <h2 class="card-title" style="margin-bottom: 12px;">📺 Featured System Reel</h2>
+                <div class="video-wrapper">
+                    <video controls autoplay muted>
+                         <source src="vedio.mp4" type="video/mp4"/>
+                         Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="dash-card" id="Projects">
+                <h2 class="card-title">📂 Digital Work & System Products</h2>
+                <p style="font-size: 14px; color: #9ca3af; margin-bottom: 20px;">
+                    Explore real-world software engineering assets engineered to maximize performance. Hover over items to view micro-interactions.
+                </p>
+                
+                <div class="project-showcase-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-img-box">
+                            <img src="resident.jpg" alt="Barangay Cawayan Resident Management System">
+                            <span class="project-badge">Live Enterprise</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Cawayan Marlin System</h3>
+                            <p class="project-desc">Digital resident records & household core panel optimized for local administrative workflows.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img-box">
+                            <img src="clinic.png" alt="Doctor EC Intelligence Center">
+                            <span class="project-badge">SaaS Panel</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Doctor EC Intelligence Center</h3>
+                            <p class="project-desc">Advanced data metrics platform providing live tracking, queuing filters, and record analytics.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img-box">
+                            <img src="youth.png" alt="SK Hyperdrive Repository">
+                            <span class="project-badge">Database Core</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">SK Hyperdrive Core</h3>
+                            <p class="project-desc">Real-time repository management dashboard built for multi-jurisdiction information pipelines.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img-box">
+                            <img src="inventory.png" alt="Alcabasa Cruz Asset Tracker">
+                            <span class="project-badge">Logistics Management</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Alcabasa Cruz Inventory Matrix</h3>
+                            <p class="project-desc">High-performance tracking system featuring interactive map overlays and stock analytics counters.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img-box">
+                            <img src="attendance.jpg" alt="Attendance Pro Scanner Terminal">
+                            <span class="project-badge">Security Control</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Attendance Pro Terminal</h3>
+                            <p class="project-desc">Real-time attendance platform with live webcam scanning interface and automatic compliance metrics.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img-box">
+                            <img src="website.png" alt="Ephemere International Luxury Showcase">
+                            <span class="project-badge">Premium UI Showcase</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Ephemere International Portal</h3>
+                            <p class="project-desc">Ultra-luxury aesthetics web implementation for high-end beauty, clinics, and academy conversion paths.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img-box">
+                            <img src="art.png" alt="Anayam Arts Crafted Storefront">
+                            <span class="project-badge">E-Commerce Marketplace</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Anayam Arts Storefront</h3>
+                            <p class="project-desc">Sleek cultural item storefront containing item galleries, customized cart filters, and pricing lists.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img-box">
+                            <img src="flower.png" alt="DJ John Boutique Intelligence Dashboard">
+                            <span class="project-badge">Boutique Intelligence</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">DJ John Boutique Overview</h3>
+                            <p class="project-desc">Elegant business management terminal with revenue counters, process updates, and weekly trackers.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="dash-card" id="Story">
+                <h2 class="card-title">📖 My Developer Story</h2>
+                <div class="story-layout">
+                    <div>
+                        <p class="section-text">
+                            My path in software engineering started with a core goal: making complex tasks simpler through smooth, clean design. I don't just write scripts—I build data experiences that help businesses track analytics, speed up admin workflows, and scale effortlessly.
+                        </p>
+                        <p class="section-text">
+                            From deep back-end data architectures to custom neon dark-mode operational dashboards, every platform is hand-crafted to run beautifully under heavy loads.
+                        </p>
+                    </div>
+                    <div class="story-img-frame">
+                        <img src="dev.jpg" alt="Justin Galaran Neypes Development Operations Team">
+                    </div>
+                </div>
+            </div>
+
+            <div class="dash-card" id="About">
+                <h2 class="card-title">💡 Design & Development Philosophy</h2>
+                <p class="section-text">
+                    Great systems aren't just powerful under the hood; they must be natural, fast, and satisfying to use. I focus heavily on <strong>UI/UX optimization</strong>, keeping page weights low, load times fast, and security tight. 
+                </p>
+                <p class="section-text">
+                    Whether you are managing local municipal registries, handling medical queue systems, or tracking product logistics pipelines, my work ensures your business stays organized and data remains secure.
+                </p>
+            </div>
+
+            <div class="dash-card" id="Contact">
+                <h2 class="card-title">🚀 Launch Your Custom Product</h2>
+                <p class="section-text">
+                    Ready to scale your business operations or wow your clients with a sleek custom management dashboard? Drop a message detailing your requirements below, and let's bring it to life.
+                </p>
+                
+                <div class="contact-channels">
+                    <a href="mailto:justingalaran4@gmail.com" class="channel-item">
+                        <span class="channel-icon">📧</span>
+                        <span><strong>Email:</strong> justingalaran4@gmail.com</span>
+                    </a>
+                    <a href="https://www.facebook.com/justin.galaran.neypes" target="_blank" class="channel-item">
+                        <span class="channel-icon">🌐</span>
+                        <span><strong>Facebook Profile:</strong> Justin Galaran Neypes</span>
+                    </a>
+                </div>
+
+                <form action="mailto:justingalaran4@gmail.com" method="post" enctype="text/plain" class="contact-form-mock">
+                    <input type="text" name="Client Name" class="form-input" placeholder="Your Name or Company Title" required />
+                    <input type="email" name="Client Email" class="form-input" placeholder="Your Active Contact Email" required />
+                    <textarea name="System Description" class="form-input" rows="4" placeholder="Briefly describe your dream system functionality... (e.g., Inventory, Automated Booking, CRM)" required></textarea>
+                    <button type="submit" class="btn btn-primary" style="border:none; align-self:flex-start;">Submit System Briefcase</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
