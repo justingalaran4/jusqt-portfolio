@@ -45,7 +45,7 @@
             font-weight: 600;         
             display: flex;            
             gap: 6px;              
-            padding: 6px 12px;
+            padding: 6px 14px;
             background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
@@ -59,6 +59,7 @@
             overflow-x: auto;
             white-space: nowrap;
             scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
         }
 
         nav::-webkit-scrollbar {
@@ -386,7 +387,7 @@
             z-index: 5;
         }
 
-        /* --- MILESTONES SPECIAL LAYOUT (OBJECT-CONTAIN PARA KITA BUO ANG PHOTO) --- */
+        /* --- MILESTONES SPECIAL LAYOUT --- */
         .milestone-highlight-card {
             background: linear-gradient(135deg, rgba(0, 242, 254, 0.03) 0%, rgba(79, 70, 229, 0.05) 100%);
             border: 1px solid rgba(0, 255, 255, 0.15);
@@ -405,7 +406,7 @@
         .milestone-img-box img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Para kita buo at walang maputol na detalye */
+            object-fit: contain;
             margin-top: 0;
             border-radius: 0;
             border: none;
@@ -502,7 +503,6 @@
                 width: 100%;
                 justify-content: flex-start;
                 padding: 5px 10px;
-                -webkit-overflow-scrolling: touch;
             }
 
             nav a {
@@ -638,7 +638,7 @@
             <div class="dash-card" style="padding: 14px;">
                 <h2 class="card-title" style="margin-bottom: 10px;">📺 Featured System Reel</h2>
                 <div class="video-wrapper">
-                    <video controls autoplay muted playsinline>
+                    <video autoplay muted loop playsinline>
                          <source src="vedio.mp4" type="video/mp4"/>
                          Your browser does not support the video tag.
                     </video>
@@ -660,7 +660,7 @@
                         </div>
                         <div class="project-info">
                             <h3 class="project-name">BSIS Capstone Defense Showcase</h3>
-                            <p class="project-desc">Presenting system defense and software integration frameworks as a fourth-year BSIS student at Clarendon College.</p>
+                            <p class="project-desc">Presenting system defense and software integration frameworks as a fourth-year BSIS student at Clarendon College[cite: 1].</p>
                         </div>
                     </div>
 
@@ -671,7 +671,7 @@
                         </div>
                         <div class="project-info">
                             <h3 class="project-name">Mindoro News & Bulgar Feature</h3>
-                            <p class="project-desc">Featured: "Estudyante to Negosyante; 22-Anyos, Gumawa ng Sariling Delivery Web App" for Boss Pabili.</p>
+                            <p class="project-desc">Featured: "Estudyante to Negosyante; 22-Anyos, Gumawa ng Sariling Delivery Web App" for Boss Pabili[cite: 2].</p>
                         </div>
                     </div>
 
