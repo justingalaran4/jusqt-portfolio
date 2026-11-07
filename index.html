@@ -32,43 +32,43 @@
             align-items: center;
             background: radial-gradient(circle at 50% 0%, #1a1f38 0%, #0a0c16 100%);
             color: #f3f4f6;
-            gap: 30px;              
-            padding: 40px 20px;
+            gap: 25px;              
+            padding: 30px 16px;
             width: 100%;
             max-width: 100vw;
             overflow-x: hidden;
         }
 
-        /* --- SWIPE-ABLE / SCROLLABLE FLOATING NAV BAR --- */
+        /* --- SLEEK, THIN & PROFESSIONAL FLOATING NAV BAR --- */
         nav {  
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;         
             display: flex;            
-            gap: 10px;              
-            padding: 8px 14px;
+            gap: 6px;              
+            padding: 6px 12px;
             background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(0, 255, 255, 0.15);
             border-radius: 30px;
             position: sticky;
-            top: 20px;
+            top: 15px;
             z-index: 100;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 255, 255, 0.1);
             max-width: 100%;
             overflow-x: auto;
             white-space: nowrap;
-            scrollbar-width: none; /* Hide scrollbar for Firefox */
+            scrollbar-width: none;
         }
 
         nav::-webkit-scrollbar {
-            display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+            display: none;
         }
 
         nav a {
             text-decoration: none;  
             color: #9ca3af;
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 20px;
             letter-spacing: 0.5px;
             flex-shrink: 0;
@@ -386,10 +386,30 @@
             z-index: 5;
         }
 
-        /* --- HIGHLIGHTED MILESTONES SPECIAL LAYOUT --- */
+        /* --- MILESTONES SPECIAL LAYOUT (OBJECT-CONTAIN PARA KITA BUO ANG PHOTO) --- */
         .milestone-highlight-card {
             background: linear-gradient(135deg, rgba(0, 242, 254, 0.03) 0%, rgba(79, 70, 229, 0.05) 100%);
             border: 1px solid rgba(0, 255, 255, 0.15);
+        }
+
+        .milestone-img-box {
+            height: 200px;
+            background: #090b14;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .milestone-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Para kita buo at walang maputol na detalye */
+            margin-top: 0;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
         }
 
         /* --- TEXT & FORMS --- */
@@ -473,25 +493,25 @@
         /* --- MOBILE OPTIMIZATION --- */
         @media (max-width: 600px) {
             body {
-                padding: 12px 10px;
-                gap: 12px;
+                padding: 10px 8px;
+                gap: 10px;
             }
 
             nav {
-                top: 10px;
-                width: calc(100% - 20px);
+                top: 8px;
+                width: 100%;
                 justify-content: flex-start;
-                padding: 8px 12px;
+                padding: 5px 10px;
                 -webkit-overflow-scrolling: touch;
             }
 
             nav a {
-                padding: 6px 12px;
-                font-size: 12px;
+                padding: 4px 10px;
+                font-size: 11.5px;
             }
 
             .cover-photo {
-                height: 130px;
+                height: 120px;
             }
 
             .profile-meta-block {
@@ -500,9 +520,9 @@
             }
 
             .profile-meta-block img {
-                width: 100px;
-                height: 100px;
-                margin-top: -50px;
+                width: 95px;
+                height: 95px;
+                margin-top: -47px;
             }
 
             .profile-title-wrapper {
@@ -516,12 +536,12 @@
             }
 
             h1 {
-                font-size: 20px;
+                font-size: 19px;
                 text-align: center;
             }
 
             .profile-tagline {
-                font-size: 10.5px;
+                font-size: 10px;
                 text-align: center;
             }
 
@@ -534,12 +554,12 @@
             .btn {
                 width: 100%;
                 padding: 9px 14px;
-                font-size: 12.5px;
+                font-size: 12px;
             }
 
             .dash-card {
-                padding: 14px;
-                border-radius: 14px;
+                padding: 12px;
+                border-radius: 12px;
             }
 
             .story-layout {
@@ -634,23 +654,23 @@
                 <div class="project-showcase-grid" style="margin-top: 14px;">
                     
                     <div class="project-card">
-                        <div class="project-img-box" style="height: 160px;">
+                        <div class="milestone-img-box">
                             <img src="capstone.jpg" alt="BSIS Capstone Defense at Clarendon College">
                             <span class="project-badge">Academic Milestone</span>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-name">BSIS Capstone Defense Showcase[cite: 1]</h3>
+                            <h3 class="project-name">BSIS Capstone Defense Showcase</h3>
                             <p class="project-desc">Presenting system defense and software integration frameworks as a fourth-year BSIS student at Clarendon College[cite: 1].</p>
                         </div>
                     </div>
 
                     <div class="project-card">
-                        <div class="project-img-box" style="height: 160px;">
+                        <div class="milestone-img-box">
                             <img src="boss.jpg" alt="Boss Pabili Featured in Mindoro News and Bulgar">
                             <span class="project-badge">National Press Feature</span>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-name">Mindoro News & Bulgar Feature[cite: 2]</h3>
+                            <h3 class="project-name">Mindoro News & Bulgar Feature</h3>
                             <p class="project-desc">Featured nationally: "Estudyante to Negosyante; 22-Anyos, Gumawa ng Sariling Delivery App" for Boss Pabili[cite: 2].</p>
                         </div>
                     </div>
