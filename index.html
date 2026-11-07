@@ -15,7 +15,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition: all 0.25s ease-in-out;
         }
 
         body {
@@ -33,14 +33,14 @@
             scroll-behavior: smooth;
         }
 
-        /* --- STUNNING FLOATING NAV BAR --- */
+        /* --- CLEAN FLOATING NAV BAR --- */
         nav {  
             font-size: 14px;
             font-weight: 600;         
             display: flex;            
-            gap: 15px;              
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.03);
+            gap: 10px;              
+            padding: 8px 18px;
+            background: rgba(15, 23, 42, 0.75);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -48,13 +48,13 @@
             position: sticky;
             top: 20px;
             z-index: 100;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
         nav a {
             text-decoration: none;  
             color: #9ca3af;
-            padding: 8px 16px;
+            padding: 6px 14px;
             border-radius: 20px;
             letter-spacing: 0.5px;
         }
@@ -62,22 +62,21 @@
         nav a:hover {
             color: #00ffff;
             background: rgba(0, 255, 255, 0.08);
-            text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
         }
 
-        /* --- PROFILE HERO BANNER HEADER (FACEBOOK STYLE REVOLUTION) --- */
+        /* --- PROFILE HERO BANNER HEADER --- */
         .profile-container {
             width: 100%;
             max-width: 1000px;
             background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 24px;
             overflow: hidden;
             box-shadow: 0 20px 50px rgba(0,0,0,0.4);
         }
 
         .cover-photo {
-            height: 260px;
+            height: 240px;
             background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
             position: relative;
             overflow: hidden;
@@ -88,9 +87,9 @@
             position: absolute;
             width: 150%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.08), transparent);
             transform: skewX(-25deg);
-            animation: shine 8s infinite linear;
+            animation: shine 10s infinite linear;
         }
 
         @keyframes shine {
@@ -106,24 +105,23 @@
             align-items: flex-start;
         }
 
-        /* Avatar Transformation */
+        /* Avatar Styling */
         img {
             display: block;
-            width: 160px;          
-            height: 160px;
+            width: 150px;          
+            height: 150px;
             object-fit: cover;
             border-radius: 50%;
-            border: 5px solid #0a0c16;
-            margin-top: -80px;
+            border: 4px solid #0a0c16;
+            margin-top: -75px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
             z-index: 2;
             background: #1a1f38;
         }
 
         img:hover {
-            transform: scale(1.05) rotate(3deg);
+            transform: scale(1.02);
             border-color: #00ffff;
-            box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
         }
 
         /* Profile Title & Badges */
@@ -146,7 +144,7 @@
         h1 {    
             display: block;
             text-align: left;     
-            font-size: 32px;        
+            font-size: 30px;        
             font-weight: 700;
             margin: 0;        
             background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
@@ -157,23 +155,23 @@
 
         .profile-tagline {
             color: #00ffff;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1.5px;
         }
 
-        /* --- CLIENT ACQUISITION ACTION BUTTONS --- */
+        /* --- ACTION BUTTONS --- */
         .profile-actions {
             display: flex;
-            gap: 12px;
+            gap: 10px;
         }
 
         .btn {
-            padding: 12px 24px;
-            border-radius: 12px;
+            padding: 10px 20px;
+            border-radius: 10px;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             text-decoration: none;
             cursor: pointer;
             text-align: center;
@@ -182,23 +180,23 @@
         .btn-primary {
             background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
             color: #000;
-            box-shadow: 0 4px 20px rgba(0, 242, 254, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.25);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(0, 242, 254, 0.5);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(0, 242, 254, 0.4);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.04);
             color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.15);
         }
 
         /* --- MAIN TWO-COLUMN DASHBOARD LAYOUT --- */
@@ -206,7 +204,7 @@
             width: 100%;
             max-width: 1000px;
             display: grid;
-            grid-template-columns: 360px 1fr;
+            grid-template-columns: 340px 1fr;
             gap: 24px;
         }
 
@@ -222,14 +220,14 @@
 
         /* Glassmorphic Cards */
         .dash-card {
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.015);
             border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 20px;
             padding: 24px;
         }
 
         .card-title {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             color: #fff;
             margin-bottom: 16px;
@@ -245,11 +243,11 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 12px;
         }
 
         .intro-item {
-            font-size: 14px;
+            font-size: 13.5px;
             color: #9ca3af;
             display: flex;
             align-items: center;
@@ -263,20 +261,20 @@
         .skills-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
+            gap: 6px;
+            margin-top: 12px;
         }
 
         .skill-tag {
-            font-size: 12px;
-            background: rgba(79, 70, 229, 0.15);
+            font-size: 11.5px;
+            background: rgba(79, 70, 229, 0.12);
             color: #a5b4fc;
-            padding: 6px 12px;
-            border-radius: 8px;
-            border: 1px solid rgba(79, 70, 229, 0.3);
+            padding: 5px 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(79, 70, 229, 0.25);
         }
 
-        /* --- RIGHT CONTENT AREA: PREMIUM FEATURE VIDEO --- */
+        /* --- RIGHT CONTENT AREA: FEATURED REEL --- */
         .main-content-flow {
             display: flex;
             flex-direction: column;
@@ -285,55 +283,52 @@
 
         .video-wrapper {
             position: relative;
-            border-radius: 16px;
+            border-radius: 14px;
             overflow: hidden;
             background: #000;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             border: 1px solid rgba(255,255,255,0.05);
         }
 
         video {
             display: block;
             width: 100%;              
-            max-width: 1000px;        
             height: auto;
         }
 
-        /* --- PREMIUM DYNAMIC PROJECT SHOWCASE (CUSTOM PRODUCT LAYOUTS) --- */
+        /* --- PROJECT SHOWCASE --- */
         .project-showcase-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             gap: 16px;
         }
 
         .project-card {
             background: rgba(255, 255, 255, 0.01);
             border: 1px solid rgba(255, 255, 255, 0.04);
-            border-radius: 14px;
+            border-radius: 12px;
             overflow: hidden;
             position: relative;
             cursor: pointer;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.03);
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.025);
             border-color: rgba(0, 255, 255, 0.2);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
 
         .project-img-box {
-            height: 160px;
+            height: 150px;
             background: #111424;
             position: relative;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: rgba(255, 255, 255, 0.2);
         }
 
-        /* Modern layout adjustment for images */
         .project-img-box img {
             width: 100%;
             height: 100%;
@@ -343,97 +338,92 @@
             border: none;
             box-shadow: none;
         }
-        
-        .project-img-box img:hover {
-            transform: none;
-            box-shadow: none;
-        }
-
-        /* Creative Image Swap Animation Container */
-        .project-card:hover .project-img-box {
-            background: linear-gradient(45deg, #1e1b4b, #311042);
-        }
 
         .project-info {
-            padding: 16px;
+            padding: 14px;
         }
 
         .project-name {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
             color: #fff;
             margin-bottom: 4px;
         }
 
         .project-desc {
-            font-size: 13px;
+            font-size: 12.5px;
             color: #9ca3af;
             line-height: 1.4;
         }
 
         .project-badge {
             position: absolute;
-            top: 12px;
-            right: 12px;
-            background: rgba(0, 0, 0, 0.7);
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.75);
             backdrop-filter: blur(4px);
             color: #00ffff;
-            padding: 4px 8px;
+            padding: 3px 8px;
             border-radius: 6px;
-            font-size: 11px;
+            font-size: 10.5px;
             font-weight: 600;
             border: 1px solid rgba(0, 255, 255, 0.2);
             z-index: 5;
         }
 
-        /* --- ADDED CONTENT FORMATTING FOR LINK TARGETS --- */
+        /* --- HIGHLIGHTED MILESTONES SPECIAL LAYOUT --- */
+        .milestone-highlight-card {
+            background: linear-gradient(135deg, rgba(0, 242, 254, 0.03) 0%, rgba(79, 70, 229, 0.05) 100%);
+            border: 1px solid rgba(0, 255, 255, 0.15);
+        }
+
+        /* --- TEXT & FORMS --- */
         .section-text {
-            font-size: 14px;
+            font-size: 13.5px;
             color: #9ca3af;
             line-height: 1.6;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         
         .contact-form-mock {
             display: flex;
             flex-direction: column;
             gap: 12px;
-            margin-top: 15px;
+            margin-top: 12px;
         }
         
         .form-input {
             width: 100%;
-            padding: 12px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 11px;
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(255, 255, 255, 0.07);
             border-radius: 8px;
             color: #fff;
-            font-size: 14px;
+            font-size: 13.5px;
         }
         
         .form-input:focus {
             outline: none;
             border-color: #00ffff;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.04);
         }
 
-        /* --- BRAND NEW CONTACT DETAIL STYLING --- */
         .contact-channels {
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            margin-bottom: 20px;
-            background: rgba(255, 255, 255, 0.02);
-            padding: 16px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            gap: 10px;
+            margin-bottom: 16px;
+            background: rgba(255, 255, 255, 0.015);
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
         }
 
         .channel-item {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 14px;
+            gap: 10px;
+            font-size: 13.5px;
             color: #e5e7eb;
             text-decoration: none;
         }
@@ -442,24 +432,19 @@
             color: #00ffff;
         }
 
-        .channel-icon {
-            font-size: 16px;
-        }
-
-        /* --- DYNAMIC DEV HISTORY PIC STYLING --- */
         .story-layout {
             display: flex;
-            gap: 20px;
+            gap: 18px;
             align-items: flex-start;
         }
 
         .story-img-frame {
-            width: 240px;
+            width: 220px;
             flex-shrink: 0;
-            border-radius: 14px;
-            border: 2px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
         }
 
         .story-img-frame img {
@@ -470,29 +455,28 @@
             border: none;
         }
 
-        /* --- PHONE & ANDROID SCREEN PROFESSIONAL CORE OVERHAUL --- */
+        /* --- MOBILE OPTIMIZATION --- */
         @media (max-width: 600px) {
             body {
-                padding: 15px 10px;
-                gap: 15px;
+                padding: 12px 8px;
+                gap: 12px;
             }
 
             nav {
-                top: 10px;
+                top: 8px;
                 width: 100%;
                 justify-content: center;
-                gap: 4px;
-                padding: 8px 6px;
+                gap: 2px;
+                padding: 6px 4px;
             }
 
             nav a {
-                padding: 6px 10px;
-                font-size: 11px;
-                letter-spacing: 0px;
+                padding: 5px 8px;
+                font-size: 10.5px;
             }
 
             .cover-photo {
-                height: 140px;
+                height: 130px;
             }
 
             .profile-meta-block {
@@ -501,14 +485,14 @@
             }
 
             .profile-meta-block img {
-                width: 110px;
-                height: 110px;
-                margin-top: -55px;
+                width: 100px;
+                height: 100px;
+                margin-top: -50px;
             }
 
             .profile-title-wrapper {
                 text-align: center;
-                margin-top: 10px;
+                margin-top: 8px;
                 justify-content: center;
             }
 
@@ -517,30 +501,30 @@
             }
 
             h1 {
-                font-size: 22px;
+                font-size: 20px;
                 text-align: center;
             }
 
             .profile-tagline {
-                font-size: 11px;
+                font-size: 10.5px;
                 text-align: center;
             }
 
             .profile-actions {
                 width: 100%;
                 flex-direction: column;
-                gap: 8px;
+                gap: 6px;
             }
 
             .btn {
                 width: 100%;
-                padding: 10px 16px;
-                font-size: 13px;
+                padding: 9px 14px;
+                font-size: 12.5px;
             }
 
             .dash-card {
-                padding: 16px;
-                border-radius: 16px;
+                padding: 14px;
+                border-radius: 14px;
             }
 
             .story-layout {
@@ -550,7 +534,7 @@
 
             .story-img-frame {
                 width: 100%;
-                max-width: 320px;
+                max-width: 280px;
             }
 
             .project-showcase-grid {
@@ -601,12 +585,12 @@
                 <li class="intro-item">⚡ High Performance <strong>UI/UX Custom Implementations</strong></li>
             </ul>
             
-            <h2 class="card-title" style="margin-top: 25px;">🛠️ Tech Stack</h2>
+            <h2 class="card-title" style="margin-top: 22px;">🛠️ Tech Stack</h2>
             <div class="skills-container">
-                <span class="skill-tag">HTML5 / CSS3 / JAVA SCRIPT</span>
+                <span class="skill-tag">HTML5 / CSS3 / JS</span>
                 <span class="skill-tag">Premium UI/UX</span>
                 <span class="skill-tag">Custom Systems</span>
-                <span class="skill-tag">Database Architecture</span>
+                <span class="skill-tag">Database Arch</span>
                 <span class="skill-tag">Responsive Core</span>
                 <span class="skill-tag">SQL</span>
                 <span class="skill-tag">n8n</span>
@@ -616,8 +600,8 @@
 
         <div class="main-content-flow">
             
-            <div class="dash-card" style="padding: 16px;">
-                <h2 class="card-title" style="margin-bottom: 12px;">📺 Featured System Reel</h2>
+            <div class="dash-card" style="padding: 14px;">
+                <h2 class="card-title" style="margin-bottom: 10px;">📺 Featured System Reel</h2>
                 <div class="video-wrapper">
                     <video controls autoplay muted playsinline>
                          <source src="vedio.mp4" type="video/mp4"/>
@@ -626,9 +610,42 @@
                 </div>
             </div>
 
+            <!-- HIGHLIGHTED MILESTONES & MEDIA FEATURES -->
+            <div class="dash-card milestone-highlight-card" id="Milestones">
+                <h2 class="card-title">🌟 Featured Milestones & Press</h2>
+                <p class="section-text">
+                    Academic defense highlights and national media recognition showcasing innovation in delivery software and systems architecture.
+                </p>
+                <div class="project-showcase-grid" style="margin-top: 14px;">
+                    
+                    <div class="project-card">
+                        <div class="project-img-box" style="height: 160px;">
+                            <img src="capstone.jpg" alt="BSIS Capstone Defense at Clarendon College">
+                            <span class="project-badge">Academic Milestone</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">BSIS Capstone Defense Showcase[cite: 1]</h3>
+                            <p class="project-desc">Presenting system defense and software integration frameworks as a fourth-year BSIS student at Clarendon College[cite: 1].</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img-box" style="height: 160px;">
+                            <img src="boss.jpg" alt="Boss Pabili Featured in Mindoro News and Bulgar">
+                            <span class="project-badge">National Press Feature</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Mindoro News & Bulgar Feature[cite: 2]</h3>
+                            <p class="project-desc">Featured nationally: "Estudyante to Negosyante; 22-Anyos, Gumawa ng Sariling Delivery App" for Boss Pabili[cite: 2].</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
             <div class="dash-card" id="Projects">
                 <h2 class="card-title">📂 Digital Work & System Products</h2>
-                <p style="font-size: 14px; color: #9ca3af; margin-bottom: 20px;">
+                <p class="section-text" style="margin-bottom: 16px;">
                     Explore real-world software engineering assets engineered to maximize performance. Hover over items to view micro-interactions.
                 </p>
                 
@@ -692,7 +709,7 @@
                     <div class="project-card">
                         <div class="project-img-box">
                             <img src="website.png" alt="Ephemere International Luxury Showcase">
-                            <span class="project-badge">Premium UI Showcase</span>
+                            <span class="project-badge">UI Showcase</span>
                         </div>
                         <div class="project-info">
                             <h3 class="project-name">Ephemere International Portal</h3>
@@ -719,39 +736,6 @@
                         <div class="project-info">
                             <h3 class="project-name">DJ John Boutique Overview</h3>
                             <p class="project-desc">Elegant business management terminal with revenue counters, process updates, and weekly trackers.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- NEWLY ADDED MILESTONES SECTION: CAPSTONE DEFENSE & MEDIA FEATURES -->
-            <div class="dash-card" id="Milestones">
-                <h2 class="card-title">🌟 Milestones & Media Features</h2>
-                <p class="section-text">
-                    Highlights from academic defense milestones at Clarendon College and national media coverage recognizing platform innovations.
-                </p>
-                <div class="project-showcase-grid" style="margin-top: 15px;">
-                    
-                    <div class="project-card">
-                        <div class="project-img-box" style="height: 180px;">
-                            <img src="capstone.jpg" alt="Bachelor of Science in Information Systems Capstone Defense">
-                            <span class="project-badge">Academic Milestone</span>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-name">BSIS Capstone Defense Showcase[cite: 1]</h3>
-                            <p class="project-desc">Presenting and defending advanced software architecture and data pipeline designs as a 4th-year BSIS student at Clarendon College.</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-img-box" style="height: 180px;">
-                            <img src="boss.jpg" alt="Boss Pabili Featured in Mindoro News and Bulgar">
-                            <span class="project-badge">National Press Feature</span>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-name">Mindoro News & Bulgar Feature[cite: 2]</h3>
-                            <p class="project-desc">Recognized nationally and locally: "Estudyante to Negosyante; 22-Anyos, Gumawa ng Sariling Delivery App" for Boss Pabili Delivery Services[cite: 2].</p>
                         </div>
                     </div>
 
