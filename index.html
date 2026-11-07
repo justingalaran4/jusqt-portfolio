@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <style> 
+    <style>  
         /* --- GLOBAL REBOOT & THEME --- */
         * {
             box-sizing: border-box;
@@ -21,7 +21,7 @@
         body {
             margin: 0;
             min-height: 100vh;      
-            display: flex;           
+            display: flex;            
             flex-direction: column;  
             justify-content: flex-start; 
             align-items: center;
@@ -37,7 +37,7 @@
         nav {  
             font-size: 14px;
             font-weight: 600;         
-            display: flex;           
+            display: flex;            
             gap: 15px;              
             padding: 10px 20px;
             background: rgba(255, 255, 255, 0.03);
@@ -143,7 +143,7 @@
             gap: 4px;
         }
 
-        h1 {   
+        h1 {    
             display: block;
             text-align: left;     
             font-size: 32px;        
@@ -294,7 +294,7 @@
 
         video {
             display: block;
-            width: 100%;             
+            width: 100%;              
             max-width: 1000px;        
             height: auto;
         }
@@ -564,6 +564,7 @@
     <nav> 
          <a href="#Home">HOME</a>
          <a href="#Projects">PROJECTS</a>
+         <a href="#Milestones">MILESTONES</a>
          <a href="#Story">STORY</a> 
          <a href="#About">ABOUT</a>
          <a href="#Contact">CONTACT</a>
@@ -602,7 +603,7 @@
             
             <h2 class="card-title" style="margin-top: 25px;">🛠️ Tech Stack</h2>
             <div class="skills-container">
-                <span class="skill-tag">HTML5 / CSS3 / JAVA SCRIFT</span>
+                <span class="skill-tag">HTML5 / CSS3 / JAVA SCRIPT</span>
                 <span class="skill-tag">Premium UI/UX</span>
                 <span class="skill-tag">Custom Systems</span>
                 <span class="skill-tag">Database Architecture</span>
@@ -618,7 +619,7 @@
             <div class="dash-card" style="padding: 16px;">
                 <h2 class="card-title" style="margin-bottom: 12px;">📺 Featured System Reel</h2>
                 <div class="video-wrapper">
-                    <video controls autoplay muted>
+                    <video controls autoplay muted playsinline>
                          <source src="vedio.mp4" type="video/mp4"/>
                          Your browser does not support the video tag.
                     </video>
@@ -718,6 +719,39 @@
                         <div class="project-info">
                             <h3 class="project-name">DJ John Boutique Overview</h3>
                             <p class="project-desc">Elegant business management terminal with revenue counters, process updates, and weekly trackers.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- NEWLY ADDED MILESTONES SECTION: CAPSTONE DEFENSE & MEDIA FEATURES -->
+            <div class="dash-card" id="Milestones">
+                <h2 class="card-title">🌟 Milestones & Media Features</h2>
+                <p class="section-text">
+                    Highlights from academic defense milestones at Clarendon College and national media coverage recognizing platform innovations.
+                </p>
+                <div class="project-showcase-grid" style="margin-top: 15px;">
+                    
+                    <div class="project-card">
+                        <div class="project-img-box" style="height: 180px;">
+                            <img src="capstone.jpg" alt="Bachelor of Science in Information Systems Capstone Defense">
+                            <span class="project-badge">Academic Milestone</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">BSIS Capstone Defense Showcase[cite: 1]</h3>
+                            <p class="project-desc">Presenting and defending advanced software architecture and data pipeline designs as a 4th-year BSIS student at Clarendon College.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img-box" style="height: 180px;">
+                            <img src="boss.jpg" alt="Boss Pabili Featured in Mindoro News and Bulgar">
+                            <span class="project-badge">National Press Feature</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Mindoro News & Bulgar Feature[cite: 2]</h3>
+                            <p class="project-desc">Recognized nationally and locally: "Estudyante to Negosyante; 22-Anyos, Gumawa ng Sariling Delivery App" for Boss Pabili Delivery Services[cite: 2].</p>
                         </div>
                     </div>
 
